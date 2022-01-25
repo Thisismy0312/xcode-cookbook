@@ -18,3 +18,22 @@ func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMe
   APPDEL.window?.rootViewController?.dismiss(animated: true, completion: nil)
 }
 ```
+
+set constraints
+```swift
+videoButton.translatesAutoresizingMaskIntoConstraints = false
+videoButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+videoButton.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+videoButton.widthAnchor.constraint(equalToConstant: 200).isActive = true
+videoButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
+
+```
+set action
+```swift
+imageButton.addTarget(self, action: #selector(imageButtonClicked(button:)), for: .touchUpInside)
+```
+```swift
+@objc func imageButtonClicked(button: UIButton) {
+  //Code
+}
+```
